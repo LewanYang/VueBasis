@@ -1,0 +1,19 @@
+// 存放babel相关配置
+
+{
+  "presets": [
+    [
+      "env",
+      {
+        "target": {
+          "chrome": 52,
+          "browsers": [
+            "last 2 versions",
+            "safari 7"
+          ]
+        }
+      }
+    ]
+  ]
+}
+// 兼容到chrome52版本以上
