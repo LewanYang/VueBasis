@@ -10,6 +10,10 @@
         <sum-item ref="one"  @changenum="sumNumber"></sum-item>
         <sum-item ref="two" @changenum="sumNumber"></sum-item>
         <div>{{sum}}</div>
+        <br>
+        <span>------------------------------------------------------------</span>
+        <send-data :count="3"></send-data>
+        <send-data :count="2"></send-data>
     </div>
 </template>
 <script>
@@ -19,6 +23,7 @@
     import SetWay from './components/setway.vue'
     import TableFile from './components/table.vue'
     import SumItem from './components/sumitem.vue'
+    import SendData from './components/senddata.vue'
     export default {
         data(){
             return {
@@ -48,7 +53,8 @@
             ClassBind,
             SetWay,
             TableFile,
-            SumItem
+            SumItem,
+            SendData
         }
     }
 </script>
