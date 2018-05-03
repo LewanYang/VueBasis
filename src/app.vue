@@ -12,8 +12,9 @@
         <div>{{sum}}</div>
         <br>
         <span>------------------------------------------------------------</span>
-        <send-data :count="3"></send-data>
-        <send-data :count="2"></send-data>
+        <send-data :count="3" @inc="increaseNum"></send-data>
+        <send-data :count="2" @inc="increaseNum"></send-data>
+        <div>{{total}}</div>
     </div>
 </template>
 <script>
@@ -29,7 +30,8 @@
             return {
                 inputValue: '',
                 list: [],
-                sum: 0
+                sum: 0,
+                total: 5
             }
         },
         methods: {
@@ -45,6 +47,9 @@
                 console.log(this.$refs.one.number)
                 console.log(this.$refs.two.number)
                 this.sum=this.$refs.one.number+this.$refs.two.number
+            },
+            increaseNum:function(num){
+                this.total += num
             }
         },
         components: {
