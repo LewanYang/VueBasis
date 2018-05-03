@@ -17,6 +17,7 @@
         methods: {
             handleClick:function(){
                 this.currentNumber++
+                this.$emit('inc',1)
             }
         }
     }
