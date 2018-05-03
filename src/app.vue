@@ -15,6 +15,18 @@
         <send-data :count="3" @inc="increaseNum"></send-data>
         <send-data :count="2" @inc="increaseNum"></send-data>
         <div>{{total}}</div>
+
+        <span>-----------------------------------------------------------</span>
+        <h1>使用作用域slot插槽</h1>
+        <child>
+            <template slot-scope="props">
+                <h1>{{props.item}}</h1>
+            </template>
+        </child>
+
+        <span>---------------------------------------------------------------</span>
+        <h1>CSS动画原理</h1>
+        <carton></carton>
     </div>
 </template>
 <script>
@@ -25,6 +37,8 @@
     import TableFile from './components/table.vue'
     import SumItem from './components/sumitem.vue'
     import SendData from './components/senddata.vue'
+    import Child from './components/child.vue'
+    import Carton from './components/carton.vue'
     export default {
         data(){
             return {
@@ -59,7 +73,9 @@
             SetWay,
             TableFile,
             SumItem,
-            SendData
+            SendData,
+            Child,
+            Carton
         }
     }
 </script>
